@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chats"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="95">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/text_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="90"
+            android:background="@drawable/login_bg"
+            android:ems="10"
+            android:hint="Enter message"
+            android:inputType="textMultiLine"
+            android:padding="15dp" />
+
+        <ImageView
+            android:id="@+id/sent_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            app:srcCompat="@drawable/sent_button" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
